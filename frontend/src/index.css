@@ -1,0 +1,69 @@
+@import "@fontsource/space-grotesk/400.css";
+@import "@fontsource/space-grotesk/600.css";
+@import "@fontsource/space-grotesk/700.css";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/500.css";
+@import "@fontsource/jetbrains-mono/700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-paper: #F5F3ED;
+  --color-ink: #171717;
+  --color-lime: #C6FF4D;
+  --border-thick: 2.5px solid #171717;
+}
+
+body {
+  margin: 0;
+  background-color: #F5F3ED;
+  color: #171717;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Neo-brutalist utilities */
+.brutal-border {
+  border: 2.5px solid #171717;
+}
+
+.brutal-border-b {
+  border-bottom: 2.5px solid #171717;
+}
+
+.brutal-border-r {
+  border-right: 2.5px solid #171717;
+}
+
+.brutal-shadow {
+  box-shadow: 4px 4px 0 #171717;
+}
+
+.brutal-shadow-sm {
+  box-shadow: 2px 2px 0 #171717;
+}
+
+.brutal-shadow-lg {
+  box-shadow: 6px 6px 0 #171717;
+}
+
+.brutal-btn-active:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #171717;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ECE9E0;
+}
+::-webkit-scrollbar-thumb {
+  background: #171717;
+  border-radius: 0px;
+}

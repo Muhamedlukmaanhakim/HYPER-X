@@ -1,0 +1,48 @@
+# Environments
+.env
+.env.local
+.env.*.local
+backend/.env
+**/.env
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Databases and Chroma Vector Store
+*.db
+*.sqlite
+*.sqlite3
+data_backup/
+data/uploads/*
+!data/uploads/.gitkeep
+data/chroma/*
+!data/chroma/.gitkeep
+
+# Testing and Cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Frontend build
+frontend/dist/
+frontend/.turbo/
+

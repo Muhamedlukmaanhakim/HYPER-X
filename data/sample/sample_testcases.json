@@ -1,0 +1,115 @@
+[
+  {
+    "id": "tc-sample-001",
+    "document_title": "sample_document.txt",
+    "question": "What encryption standard and envelope key rotation schedule does Acme Corp enforce for data at rest?",
+    "question_type": "direct_factual",
+    "reference_answer": "Acme Corp uses AES-256-GCM encryption with automated 90-day envelope key rotation managed via AWS KMS.",
+    "expected_evidence": [
+      {
+        "page": 1,
+        "text_span": "All customer data is secured at rest using AES-256-GCM encryption with automated 90-day envelope key rotation managed through AWS KMS."
+      }
+    ],
+    "should_abstain": false,
+    "status": "approved",
+    "source": "sample",
+    "notes": "Direct factual question targeting Section 1 encryption baseline.",
+    "demo_answer": "Customer data is encrypted at rest using AES-256-GCM with automated 90-day envelope key rotation through AWS KMS [Page 1].",
+    "demo_citations": ["sample_doc:1:0"]
+  },
+  {
+    "id": "tc-sample-002",
+    "document_title": "sample_document.txt",
+    "question": "What is the standard API rate limit for Tier 1 consumers and the associated burst maximum?",
+    "question_type": "numerical",
+    "reference_answer": "Tier 1 consumers are capped at 120 requests per minute with a maximum burst capacity of 180 requests.",
+    "expected_evidence": [
+      {
+        "page": 2,
+        "text_span": "Standard API consumers (Tier 1) are strictly capped at 120 requests per minute with a maximum burst capacity of 180 requests."
+      }
+    ],
+    "should_abstain": false,
+    "status": "approved",
+    "source": "sample",
+    "notes": "Numerical question targeting rate limits in Section 3.",
+    "demo_answer": "Tier 1 standard consumers are capped at 120 requests per minute with an upper burst limit of 180 requests [Page 2].",
+    "demo_citations": ["sample_doc:2:0"]
+  },
+  {
+    "id": "tc-sample-003",
+    "document_title": "sample_document.txt",
+    "question": "How long are general debug logs kept before deletion compared to financial ledgers?",
+    "question_type": "paraphrased",
+    "reference_answer": "Debug and audit logs are retained for 90 days before cryptographic shredding, whereas financial ledgers must be kept for 7 years.",
+    "expected_evidence": [
+      {
+        "page": 1,
+        "text_span": "Debug and audit logs are retained in immutable cold storage for exactly 90 days before automated cryptographic shredding. Financial transactional ledgers and cryptographic proof chains are subject to statutory compliance and must be preserved for 7 years."
+      }
+    ],
+    "should_abstain": false,
+    "status": "approved",
+    "source": "sample",
+    "notes": "Paraphrased comparison between two retention periods.",
+    "demo_answer": "Debug and audit logs are kept for 90 days before automated shredding, while financial ledgers are retained for 7 years for compliance [Page 1].",
+    "demo_citations": ["sample_doc:1:0"]
+  },
+  {
+    "id": "tc-sample-004",
+    "document_title": "sample_document.txt",
+    "question": "What conditions trigger high-availability agent failover, and what regional quorum vote occurs?",
+    "question_type": "multi_passage",
+    "reference_answer": "Failover triggers after 3 consecutive health probe timeouts of 5,000 milliseconds each. The watcher then executes a secondary quorum vote in Region B (eu-central-1) requiring at least a 3-node majority.",
+    "expected_evidence": [
+      {
+        "page": 2,
+        "text_span": "High-availability failover is triggered when 3 consecutive health probe timeouts of 5,000 milliseconds each are recorded by the consensus watcher."
+      },
+      {
+        "page": 2,
+        "text_span": "Step B: The watcher executes a secondary quorum vote in Region B (eu-central-1) requiring a minimum 3-node majority."
+      }
+    ],
+    "should_abstain": false,
+    "status": "approved",
+    "source": "sample",
+    "notes": "Multi-passage synthesis question spanning trigger and quorum steps.",
+    "demo_answer": "Failover is initiated when 3 consecutive health timeouts of 5,000ms happen. The consensus watcher initiates a secondary quorum vote in Region B (eu-central-1) with a 3-node majority requirement [Page 2].",
+    "demo_citations": ["sample_doc:2:1"]
+  },
+  {
+    "id": "tc-sample-005",
+    "document_title": "sample_document.txt",
+    "question": "What is the liquid nitrogen cooling temperature for Acme Corp's quantum processor fleet?",
+    "question_type": "unanswerable",
+    "reference_answer": "INSUFFICIENT_EVIDENCE",
+    "expected_evidence": [],
+    "should_abstain": true,
+    "status": "approved",
+    "source": "sample",
+    "notes": "Unanswerable question; document does not mention quantum processors or cryogenic cooling.",
+    "demo_answer": "INSUFFICIENT_EVIDENCE",
+    "demo_citations": []
+  },
+  {
+    "id": "tc-sample-006",
+    "document_title": "sample_document.txt",
+    "question": "Who must approve autonomous agent IAM credential provisioning before execution?",
+    "question_type": "direct_factual",
+    "reference_answer": "Dual-custody cryptographic approval is required from both the Platform Lead and the Information Security Officer.",
+    "expected_evidence": [
+      {
+        "page": 3,
+        "text_span": "without dual-custody cryptographic approval from both the Platform Lead and the Information Security Officer."
+      }
+    ],
+    "should_abstain": false,
+    "status": "approved",
+    "source": "sample",
+    "notes": "Prohibited operations approval requirement in Section 6.",
+    "demo_answer": "Agents cannot provision IAM user credentials without dual-custody cryptographic approval from both the Platform Lead and the Information Security Officer [Page 3].",
+    "demo_citations": ["sample_doc:3:0"]
+  }
+]
